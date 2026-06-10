@@ -12,7 +12,6 @@ export default function HeroVideo() {
       onEnded={(e) => {
         e.currentTarget.style.opacity = "0";
       }}
-      style={{ transition: "opacity 1s ease" }}
     />
   );
 }
