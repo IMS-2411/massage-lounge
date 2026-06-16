@@ -23,8 +23,8 @@ export default function Page() {
                 <div>
                   <div className="eyebrow mb-3">Bezoekadres</div>
                   <p className="text-lg text-espresso/80 leading-relaxed">
-                    Rijswijk<br />
-                    <span className="text-sm text-espresso/50">(adres op afspraak)</span>
+                    Visseringlaan 19 — 1ste verdieping<br />
+                    2288 ER Rijswijk
                   </p>
                 </div>
 
