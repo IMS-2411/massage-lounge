@@ -41,14 +41,9 @@ export default function Page() {
                 <div>
                   <div className="eyebrow mb-3">Openingstijden</div>
                   <div className="space-y-1 text-espresso/80 text-sm leading-relaxed">
-                    <div className="flex justify-between max-w-[180px]">
-                      <span>Dinsdag — Vrijdag</span>
-                    </div>
-                    <div className="flex justify-between max-w-[180px]">
-                      <span>Zaterdag</span>
-                    </div>
-                    <div className="text-espresso/50 mt-1">10:00 — 19:00</div>
-                    <div className="text-espresso/40 text-xs mt-3">Maandag & Zondag gesloten</div>
+                    <div><span>Vrijdag — Zondag</span></div>
+                    <div className="text-espresso/50 mt-1">13:00 — 18:00</div>
+                    <div className="text-espresso/40 text-xs mt-3">Maandag t/m donderdag gesloten</div>
                   </div>
                 </div>
 
