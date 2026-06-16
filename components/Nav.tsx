@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/behandelingen", label: "Behandelingen" },
@@ -10,6 +11,8 @@ const links = [
 ];
 
 export default function Nav() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -17,12 +20,13 @@ export default function Nav() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const textColor = scrolled ? "text-espresso" : "text-cream";
-  const borderColor = scrolled ? "border-espresso" : "border-cream";
-  const hoverBg = scrolled ? "hover:bg-espresso hover:text-cream" : "hover:bg-cream hover:text-espresso";
+  const dark = scrolled || !isHome;
+  const textColor = dark ? "text-espresso" : "text-cream";
+  const borderColor = dark ? "border-espresso" : "border-cream";
+  const hoverBg = dark ? "hover:bg-espresso hover:text-cream" : "hover:bg-cream hover:text-espresso";
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-cream/90 backdrop-blur-md border-b border-espresso/10" : ""}`}>
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${dark ? "bg-cream/90 backdrop-blur-md border-b border-espresso/10" : ""}`}>
       <div className={`container-x flex items-center justify-between h-20 ${textColor}`}>
         <Link href="/" className="font-serif text-xl tracking-tight">
           Massage Lounge
