@@ -37,6 +37,12 @@ export default function AdminHeader() {
             >
               2FA Setup
             </button>
+            <Link
+              href="/admin/instellingen"
+              className="text-xs text-cream/50 hover:text-cream transition-colors underline underline-offset-4"
+            >
+              Instellingen
+            </Link>
             <button
               onClick={logout}
               className="text-xs border border-cream/20 px-4 py-2 rounded-full hover:bg-cream hover:text-espresso transition-all"

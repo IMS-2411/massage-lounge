@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verify } from "otplib";
 import { setSession } from "@/lib/auth";
+import { verifyPassword } from "@/lib/credentials";
 
 export async function POST(req: NextRequest) {
   const { username, password, token } = await req.json();
 
-  if (
-    username !== process.env.ADMIN_USERNAME ||
-    password !== process.env.ADMIN_PASSWORD
-  ) {
+  const usernameOk = username === process.env.ADMIN_USERNAME;
+  const passwordOk = await verifyPassword(password);
+
+  if (!usernameOk || !passwordOk) {
     return NextResponse.json({ error: "Onjuiste inloggegevens." }, { status: 401 });
   }
 
