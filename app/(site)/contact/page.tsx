@@ -31,10 +31,10 @@ export default function Page() {
                 <div>
                   <div className="eyebrow mb-3">E-mail</div>
                   <a
-                    href="mailto:info@massage-lounge.nl"
+                    href="mailto:massage-lounge@outlook.com"
                     className="text-base text-espresso underline underline-offset-4 hover:text-sand transition-colors"
                   >
-                    info@massage-lounge.nl
+                    massage-lounge@outlook.com
                   </a>
                 </div>
 
@@ -49,8 +49,8 @@ export default function Page() {
 
                 <div className="border-t border-espresso/10 pt-8">
                   <div className="eyebrow mb-3">Volg de Lounge</div>
-                  <a href="#" className="text-sm text-espresso/60 hover:text-espresso transition-colors underline underline-offset-4">
-                    @massage.lounge.rijswijk
+                  <a href="https://www.instagram.com/themassage.lounge" target="_blank" rel="noopener noreferrer" className="text-sm text-espresso/60 hover:text-espresso transition-colors underline underline-offset-4">
+                    @themassage.lounge
                   </a>
                 </div>
               </div>
